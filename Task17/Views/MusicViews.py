@@ -38,20 +38,20 @@ class MusicViews(Tk):
         self.input_year.pack()
 
         # artist
-        self.owner = ttk.Label(self.fram_add, text="введите имя автора")
-        self.owner.pack()
-        # окна ввода owner
-        self.input_owner = ttk.Entry(self.fram_add)
-        self.input_owner.pack()
+        self.artist = ttk.Label(self.fram_add, text="введите имя автора")
+        self.artist.pack()
+        # окна ввода artist
+        self.input_artist = ttk.Entry(self.fram_add)
+        self.input_artist.pack()
 
         # кнопка
-        self.add_button = ttk.Button(self.fram_add, text='добавить', command=self.add_pet)
+        self.add_button = ttk.Button(self.fram_add, text='добавить', command=self.add_music)
         self.add_button.pack()
 
         # таблица
         self.fram_table = ttk.Frame(self, borderwidth=1, relief=SOLID, padding=[10, 10])
         self.fram_table.pack(anchor='center', fill=X, padx=10, pady=10)
-        columns = ('id', 'name', 'type', 'age', 'owner', 'vaccinated')
+        columns = ('id', 'title', 'artist', 'album', 'year', 'genre')
         self.tree = ttk.Treeview(self.fram_table,columns=columns,show="headings")
         self.tree.pack(fill=BOTH, expand=1)
         self.table()
@@ -60,37 +60,37 @@ class MusicViews(Tk):
         for item in self.tree.get_children():
             self.tree.delete(item)
         # список животных
-        pets = MusicController.get()
-        list_pets = [] # сюда будут передоватся картежи с описанием животных
-        for pet in pets:
-            list_pets.append(
+        musics = MusicController.get()
+        list_musics = [] # сюда будут передоватся картежи с описанием животных
+        for pet in musics:
+            list_musics.append(
                 (
                     pet['id'],
-                    pet['name'],
-                    pet['type'],
-                    pet['age'],
-                    pet['owner'],
-                    pet['vaccinated'],
+                    pet['title'],
+                    pet['artist'],
+                    pet['album'],
+                    pet['year'],
+                    pet['genre'],
                  )
             )
 
         # перевести на русский язык названия столбцов
         self.tree.heading('id',text='№')
-        self.tree.heading('name',text='имя')
-        self.tree.heading('type',text='тип')
-        self.tree.heading('age',text='возраст')
-        self.tree.heading('owner',text='имя хозяина')
-        self.tree.heading('vaccinated',text='вакцинация')
-        for pet in list_pets:
+        self.tree.heading('title',text='имя')
+        self.tree.heading('artist',text='тип')
+        self.tree.heading('album',text='возраст')
+        self.tree.heading('year',text='имя хозяина')
+        self.tree.heading('genre',text='вакцинация')
+        for pet in list_musics:
             self.tree.insert('',END,values=pet)
 
     # вывод
-    def add_pet(self):
+    def add_music(self):
         MusicController.add(
-            name=self.input_name.get(),
-            type=self.input_type.get(),
-            age=self.input_age.get(),
-            owner=self.input_owner.get()
+            title=self.input_title.get(),
+            genre=self.input_genre.get(),
+            year=self.input_year.get(),
+            artist=self.input_artist.get()
         )
         self.table()
         print(MusicController.get())
