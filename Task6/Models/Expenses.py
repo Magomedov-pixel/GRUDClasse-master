@@ -12,7 +12,7 @@ class Expenses:
         dict['id'] = self.id
         self.expense.append(dict)
         self.id += 1
-
+#
 if __name__ == '__main__':
     exp = Expenses()
     print(exp.expense)
