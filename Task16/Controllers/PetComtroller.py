@@ -41,8 +41,8 @@ class PetController:
             if dict['id'] == id:
                 dict['vaccinated'] = True
                 return dict
-            else:
-                return f'питомца с id {id} нет в базе данных'
+        else:
+            return f'питомца с id {id} нет в базе данных'
 
     @classmethod
     def list_owner(cls, owner):

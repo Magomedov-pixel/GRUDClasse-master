@@ -28,8 +28,8 @@ class ShoppingControllers:
             if dict['id'] == id:
                 dict['bought'] = True
                 return dict
-            else:
-                return f'продукта не {id} в базе'
+        else:
+            return f'продукта не {id} в базе'
 
     # удалить продукт
     @classmethod

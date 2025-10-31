@@ -25,8 +25,8 @@ class MoviesController():
             if dict['id'] == id:
                 dict['watched'] = False
                 return dict
-            else:
-                return f"фильм не просмотрен или {id} нет в базе"
+        else:
+            return f"фильм не просмотрен или {id} нет в базе"
 
     #поиск по названию.
     @classmethod
