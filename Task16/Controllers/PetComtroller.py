@@ -31,7 +31,7 @@ class PetController:
 
     # поставить прививку,
     @classmethod
-    def vaccinated(cls,id):
+    def vaccinated(cls, id):
         '''
         поменять значение ключа vaccinated  на True по ИД питомца
         в цикле перебрать список с питомца
@@ -43,21 +43,25 @@ class PetController:
                 return dict
             else:
                 return f'питомца с id {id} нет в базе данных'
+
     @classmethod
-    def list_owner(cls,owner):
+    def list_owner(cls, owner):
         list = []
         for dict in cls.get():
             if dict['owner'] == owner:
                 list.append(dict['name'])
         return list
+
     # найти по типу
     @classmethod
-    def type_pet(cls,type):
+    def type_pet(cls, type):
         result = f"нет {type}"
         for dict in cls.get():
             if dict['type'] == type:
                 result = f"есть {type}"
         return result
+
+
 if __name__ == "__main__":
     print(PetController.get())
     print(PetController.add('Машка', 'кошка', 5, "Мария"))
