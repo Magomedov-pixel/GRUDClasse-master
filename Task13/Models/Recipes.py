@@ -7,6 +7,7 @@ class Recipe:
              "cooking_time": 120,
              "difficulty": "средняя"}
         ]
+        self.id = 2
     @property
     def recipes(self):
         return self.__list_recipes
