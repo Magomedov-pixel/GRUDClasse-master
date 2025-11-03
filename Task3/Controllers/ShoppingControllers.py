@@ -18,8 +18,8 @@ class ShoppingControllers:
 
     # добавить продукт
     @classmethod
-    def add(cls, product):
-        cls.obj.shoppings = {"product": product}
+    def add(cls, product,quantity):
+        cls.obj.shoppings = {"product": product,"quantity":quantity}
 
     # отметить купленным
     @classmethod
