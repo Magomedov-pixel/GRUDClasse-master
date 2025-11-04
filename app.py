@@ -38,6 +38,10 @@
 # window = EventsView()
 # window.mainloop()
 
-from Task12.Views.ProjectsViews import ProjectsView
-window = ProjectsView()
+# from Task12.Views.ProjectsViews import ProjectsView
+# window = ProjectsView()
+# window.mainloop()
+
+from Task13.Views.RecipesViews import RecipesView
+window = RecipesView()
 window.mainloop()
