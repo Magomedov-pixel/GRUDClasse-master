@@ -11,8 +11,8 @@ class EmployeeController:
     def get(cls):
         return cls.obj.employees
     @classmethod
-    def add(cls,name,position,department):
-        cls.obj.employees ={"name":name,"position":position,"department":department}
+    def add(cls,name,position,salary,department):
+        cls.obj.employees ={"name":name,"position":position,"salary":salary,"department":department}
     @classmethod
     def up_salary(cls,id,new_salary):
         for dict in cls.get():

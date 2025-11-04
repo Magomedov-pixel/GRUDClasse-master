@@ -12,7 +12,7 @@ class ExpensesController:
         return cls.obj.expense
 
     @classmethod
-    def set(cls, amount, category, date, description,):
+    def add(cls, amount, category, date, description,):
         cls.obj.expense = {"amount": amount, "category": category, "date": date, "description": description}
     @classmethod
     def update(cls,id,new_amound):

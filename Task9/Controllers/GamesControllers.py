@@ -11,8 +11,8 @@ class GamesController(Games):
     def get(cls):
         return cls.obj.games
     @classmethod
-    def add(cls, title, genre, platform, completed):
-        cls.obj.games = {"title": title, "genre": genre, "platform": platform, "completed": completed}
+    def add(cls, title, genre, platform):
+        cls.obj.games = {"title": title, "genre": genre, "platform": platform}
     #найти
     @classmethod
     def tti_genre(cls, genre):
