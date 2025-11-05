@@ -8,8 +8,8 @@ class RecipesController:
     def get(cls):
         return cls.obj.recipes
     @classmethod
-    def add(cls,name,ingredients,cooking_time):
-        cls.obj.recipes = {"name": name,"ingredients": ingredients,"cooking_time": cooking_time}
+    def add(cls,name,ingredients):
+        cls.obj.recipes = {"name": name,"ingredients": ingredients,}
 
     @classmethod
     def ingredients(cls, ingredients):
