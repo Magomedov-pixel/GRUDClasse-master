@@ -1,4 +1,4 @@
-from Task4_2.Models.BaseModel import *
+from Task4_peewee.Models.BaseModel import *
 
 
 class Movie(BaseModel):

@@ -1,4 +1,4 @@
-from Task3_2.Connect.connect import *
+from Task3_peewee.Connect.connect import *
 
 class BaseModel(Model):
     class Meta:

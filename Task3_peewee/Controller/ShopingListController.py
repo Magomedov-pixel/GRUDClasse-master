@@ -1,4 +1,4 @@
-from Task3_2.Models.ShopingList import *
+from Task3_peewee.Models.ShopingList import *
 
 
 class ShopingListController:

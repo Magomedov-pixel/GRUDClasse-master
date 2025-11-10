@@ -1,4 +1,4 @@
-from Task4_2.Models.Movie import *
+from Task4_peewee.Models.Movie import *
 
 class MovieController:
     '''

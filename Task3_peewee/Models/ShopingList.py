@@ -1,4 +1,4 @@
-from Task3_2.Models.BasseModel import *
+from Task3_peewee.Models.BasseModel import *
 
 
 class ShopingList(BaseModel):

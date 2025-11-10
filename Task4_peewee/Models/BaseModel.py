@@ -1,4 +1,4 @@
-from Task4_2.Connection.Connection import *
+from Task4_peewee.Connection.Connection import *
 
 
 class BaseModel(Model):
