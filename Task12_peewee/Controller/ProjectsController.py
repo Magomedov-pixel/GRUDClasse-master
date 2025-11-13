@@ -1,4 +1,4 @@
-from Task12_peewee.Model.Recipes import *
+from Task12_peewee.Model.Projects import *
 
 class RecipesController:
     '''

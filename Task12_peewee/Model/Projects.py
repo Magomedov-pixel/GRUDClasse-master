@@ -1,4 +1,4 @@
-from Task12_peewee.Model.BaseModel import *
+from Task13_peewee.Model.BaseModel import *
 
 class Recipes(BaseModel):
     id = PrimaryKeyField()
