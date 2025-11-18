@@ -15,8 +15,12 @@ class TasksController:
             completed = completed
         )
     @classmethod
+    def get(cls):
+        #показать все
+        return Tasks.select()
+    @classmethod
     def completed_update(cls, id, completed):
-        #  отметить выполненной,
+        #  отметить выполненной
         Tasks.update({Tasks.completed: completed}).where(Tasks.id == id).execute()
     @classmethod
     def delite(cls, id):
