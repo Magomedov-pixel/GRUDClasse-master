@@ -24,7 +24,6 @@ class GamesComtroller:
     def complited_F(cls):
         # отметить пройденной
         return Games.select().where(Games.completed == True)
-
     @classmethod
     def get_platform(cls, platform):
         # игры для платформы
