@@ -17,4 +17,13 @@ class ClientsController:
             email = email,
             status = status
         )
-
+    @classmethod
+    def status(cls):
+        # отметить пройденной
+        return Clients.select().where(Clients.status == False)
+    @classmethod
+    def get_name(cls, name):
+        # найти по названию,
+        return Clients.select().where(Clients.name == name)
+if __name__ == "__main__":
+    ClientsController.add("sds",'sd','sd','sdd','sddd')

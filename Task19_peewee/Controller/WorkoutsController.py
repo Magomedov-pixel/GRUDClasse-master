@@ -20,3 +20,10 @@ class WorkoutsController:
     def type(cls,type):
         # статистика за неделю
         return Workouts.select().where(Workouts.type == type)
+
+    @classmethod
+    def type(cls, duration):
+        # общая продолжительность
+        return Workouts.select().where(Workouts.duration == duration)
+if __name__ == "__main__":
+    WorkoutsController.type("type")
