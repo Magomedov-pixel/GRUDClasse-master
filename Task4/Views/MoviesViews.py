@@ -38,7 +38,8 @@ class MoviesView(Tk):
         self.input_rating.pack()
 
         # кнопка
-        self.add_button = ttk.Button(self.fram_add, text='добавить', command=self.add_mov)
+        self.add_button = ttk.Button(self.fram_add, text='добавить',command=self.add_mov)
+        # self.add_button['command'] = self.add_film
         self.add_button.pack()
 
         # таблица
@@ -76,8 +77,21 @@ class MoviesView(Tk):
         for movies in list_movies:
             self.tree.insert('',END,values=movies)
 
+    # def add_film(self):
+    #     self.name = self.input_title.get()
+    #     self.year = self.input_year.get()
+    #     if self.name == '' or self.year == '':
+    #         self.add_mov['text'] = 'введите название и год выпуска фильма'
+    #     else:
+    #         MoviesController.add(
+    #             title=self.title,
+    #             year=self.year,
+    #         )
+    #         self.input_title['text'] = ''
+    #         self.input_year['text'] = ''
     # вывод
     def add_mov(self):
+        self.name = self.input_title.get()
         MoviesController.add(
             title=self.input_title.get(),
             year=self.input_year.get(),
