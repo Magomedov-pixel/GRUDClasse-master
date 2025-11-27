@@ -1,4 +1,4 @@
-from Task_4.Models.Movie import *
+from Task_4_views.Models.Movie import *
 
 
 class MovieController:

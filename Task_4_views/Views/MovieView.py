@@ -1,8 +1,8 @@
 from tkinter import *
 from tkinter import ttk
 
-from Task_4.Controllers.MovieController import MovieController
-from Task_4.Views.UpdateRatingView import UpdateRatingViews
+from Task_4_views.Controllers.MovieController import MovieController
+from Task_4_views.Views.UpdateRatingView import UpdateRatingViews
 
 
 class MovieView(Tk):

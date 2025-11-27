@@ -1,4 +1,4 @@
-from Task_4.Models.BaseModel import *
+from Task_4_views.Models.BaseModel import *
 
 class Movie(BaseModel):
     '''

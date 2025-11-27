@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import ttk
-from Task_4.Controllers.MovieController import MovieController
+from Task_4_views.Controllers.MovieController import MovieController
 
 class UpdateRatingViews(Tk):
     def __init__(self,film_id):

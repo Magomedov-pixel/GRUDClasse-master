@@ -1,4 +1,4 @@
-from Task_4.Connection.connection import *
+from Task_4_views.Connection.connection import *
 
 
 class BaseModel(Model):
