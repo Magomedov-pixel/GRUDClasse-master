@@ -1,4 +1,4 @@
-from Task19.Views.WorkoutsViews import WorkoutsViews
+from Task19.Views.WorkoutsViews import WorkoutsView
 
-window = WorkoutsViews()
+window = WorkoutsView()
 window.mainloop()
